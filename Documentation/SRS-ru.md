@@ -57,6 +57,8 @@
   ![LoginPage](Mockups/LoginPage.png)
 - Страница настройки профиля пользователя
   ![SettingsPage](Mockups/SettingsPage.png)
+  - Страница профиля пользователя
+  ![ProfilePage](Mockups/ProfilePage.png)
 - Страница блога
   ![BlogPage](Mockups/BlogPage.png)
 - Страница создания блога
