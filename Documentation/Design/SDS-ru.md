@@ -14,24 +14,24 @@
   6. [Диаграмма компонентов](#6) <br>
 
 ## 1 Глоссарий<a name="1"></a>
-<p align="center"> ![UseCase-ru](UseCase/UseCase-ru.png)</p>
+![UseCase-ru](UseCase/UseCase-ru.png)
 <p align="justify"> Глоссарий, актёры и сценарии для каждого варианта использования описаны в [отдельном документе](UseCase/UseCase-ru.md).</p>
 
 ## 2 Диаграммы активностей<a name="2"></a>
 ### 2.1 Регистрация <a name="2.1"></a>
-<p align="center"> ![SignUpActivity-ru](Activity/SignUpActivity-ru.png)</p>
+![SignUpActivity-ru](Activity/SignUpActivity-ru.png)
 
 ### 2.2 Вход в систему<a name="2.2"></a>
-<p align="center"> ![SignInActivity-ru](Activity/SignInActivity-ru.png)</p>
+![SignInActivity-ru](Activity/SignInActivity-ru.png)
 
 ### 2.3 Написание статьи<a name="2.3"></a>
-<p align="center"> ![WriteActivity-ru](Activity/WriteActivity-ru.png)</p>
+![WriteActivity-ru](Activity/WriteActivity-ru.png)
 
 ### 2.4 Оценка информации<a name="2.4"></a>
-<p align="center"> ![RateActivity-ru](Activity/RateActivity-ru.png)</p>
+![RateActivity-ru](Activity/RateActivity-ru.png)
 
 ### 2.5 Поиск информации<a name="2.5"></a>
-<p align="center"> ![SearchActivity-ru](Activity/SearchActivity-ru.png)</p>
+![SearchActivity-ru](Activity/SearchActivity-ru.png)
 
 ## 3 Диаграмма последовательности<a name="3"></a>
 <p align="center"></p>
