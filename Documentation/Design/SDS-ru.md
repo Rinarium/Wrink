@@ -71,7 +71,7 @@
 ![RateActivity-ru](Sequence/LikeSequence-ru.png)
 
 ## 4 Диаграмма классов<a name="4"></a>
-<p align="center"></p>
+![Class-ru](Class/Class.png)
 
 ## 5 Диаграммы состояний<a name="5"></a>
 ### 5.1 Регистрация <a name="5.1"></a>
