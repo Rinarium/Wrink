@@ -15,7 +15,13 @@
      3.4 [Оценка информации](#3.4) <br>
   4. [Диаграмма классов](#4) <br>
   5. [Диаграммы состояний](#5) <br>
+     5.1 [Регистрация](#5.1) <br>
+     5.2 [Вход в систему](#5.2) <br>
+     5.3 [Написание статьи](#5.3) <br>
+     5.4 [Оценка информации](#5.4) <br>
+     5.5 [Поиск информации](#5.5) <br>
   6. [Диаграмма компонентов](#6) <br>
+  7. [Диаграмма развёртывания](#7) <br>
 
 ## 1 Диаграмма вариантов использования<a name="1"></a>
 ![UseCase-ru](UseCase/UseCase-ru.png)
@@ -68,7 +74,31 @@
 <p align="center"></p>
 
 ## 5 Диаграммы состояний<a name="5"></a>
-<p align="center"></p>
+### 5.1 Регистрация <a name="5.1"></a>
+![SignUpState-ru](State/SignUpState-ru.png)
+
+---
+
+### 5.2 Вход в систему<a name="5.2"></a>
+![SignInState-ru](State/SignInState-ru.png)
+
+---
+
+### 5.3 Написание статьи<a name="5.3"></a>
+![WriteArticleState-ru](State/WriteArticleState-ru.png)
+
+---
+
+### 5.4 Оценка информации<a name="5.4"></a>
+![RateState-ru](State/RateState-ru.png)
+
+---
+
+### 5.5 Поиск информации<a name="5.5"></a>
+![SearchState-ru](State/SearchState-ru.png)
 
 ## 6 Диаграмма компонентов<a name="6"></a>
-<p align="center"></p>
+![Component](Component/Component.png)
+
+## 7 Диаграмма развёртывания<a name="7"></a>
+![Deployment](Deployment/Deployment.png)
