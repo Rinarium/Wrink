@@ -3,8 +3,11 @@ input.form-control, button.createButton {
     vertical-align: middle;
 }
 
-p.logo {
+#mainBlock {
     margin-top: 5%;
+}
+
+p.logo {
     font-family: industry;
     line-height: 0.95;
     font-size: 6.5vw;
