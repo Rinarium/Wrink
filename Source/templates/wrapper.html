@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %} {% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="/static/css/base_style.css">
+  <link rel="icon" href="/static/images/favicon.ico">
+    {% block style %} {% endblock %}
+  <script src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a href="/" class="navbar-brand">
+      <img src="/static/images/label.png" width="120" height="50" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+
+      <div class="vl"></div>
+      <hr>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input type="text" class="form-control mr-lg-2 input-lg" style="width:475px; height: 30px;" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-danger my-2 my-sm-0" style="width:70px; height: 30px; padding: 0em;">Search</button>
+      </form>
+
+      <hr>
+      <div class="vl"></div>
+
+      <div class="text-right">
+        <ul class="navbar-nav mr-auto float-right">
+            {% if authenticated %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="/static/images/account.png" width="25" height="25" alt="account">
+                        Person1
+                    </a>
+                </li>
+                <li class="nav-item">
+                     <a href="#" class="nav-link">Write</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/sign-out" class="nav-link">Sign out</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="/sign-in" class="nav-link">Sign in</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/sign-up" class="nav-link">Sign up</a>
+                </li>
+            {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
