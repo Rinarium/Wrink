@@ -38,6 +38,7 @@ def sign_out(request):
 
 class ResetPassword(views.PasswordResetView):
     template_name = 'home/password_reset_page.html'
+    success_url = 'password-reset/done'
 
 
 class ResetPasswordDone(views.PasswordResetDoneView):
