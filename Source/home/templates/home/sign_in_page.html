@@ -14,14 +14,12 @@
     <p align="center" class="logo">Entrance</p>
     <div class="container col-md-7 col-md-offset-1" style="margin-top: 10%; height: 210px;">
       <div class="fieldsWrapper">
-          <form method="post" style="display: inline;">
-            {% csrf_token %}
+          <form method="post" style="display: inline;">{% csrf_token %}
             <input id="nickname" type="text" name="username" class="form-control" placeholder="Nickname...">
             <input id="password" type="password" name="password" class="form-control" placeholder="Password...">
             <button type="submit" class="sendButton">Sign In</button>
           </form>
-          <form action="sign-in/password-reset" method="post" style="height: 100%;">
-              {% csrf_token %}
+          <form action="sign-in/password-reset" method="post" style="height: 100%;">{% csrf_token %}
             <button type="submit" class="forgotButton">Forgot password</button>
           </form>
           {% if error %}

@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from django.contrib.auth import authenticate, login, logout, views
+from django.contrib.auth import authenticate, login, logout, views, forms, models
 
 
 def check_authentication(request):
-    context = {'authenticated': request.user.is_authenticated}
+    context = dict()
+    context['authenticated'] = request.user.is_authenticated
+    if context['authenticated']:
+        context['username'] = request.user.username
     return context
 
 
@@ -28,6 +31,18 @@ def sign_in_page(request):
 
 
 def sign_up_page(request):
+    if request.method == 'POST':
+        form = forms.UserCreationForm(data=request.POST)
+        if form.is_valid():
+            models.User.objects.create_user(request.POST['username'], request.POST['email'], request.POST['password1'])
+            user = authenticate(request, username=request.POST['username'], password=request.POST['password1'])
+            login(request, user)
+            return render(request, 'home/home_page.html', {'authenticated': True})
+        else:
+            context = check_authentication(request)
+            context['error'] = True
+            return render(request, 'home/sign_up_page.html', context)
+
     return render(request, 'home/sign_up_page.html', check_authentication(request))
 
 

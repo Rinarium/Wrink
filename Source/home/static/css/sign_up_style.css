@@ -74,3 +74,15 @@ button.createButton:focus {
 #confirm_password::placeholder {
     color: #161616;
 }
+
+#error {
+    font-size: 1.35vw;
+    background-color: #161616;
+    border: 2px solid #161616;
+    color: #dc3545;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+}

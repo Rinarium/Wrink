@@ -14,11 +14,16 @@
     <p align="center" class="logo">Registration</p>
     <div class="container col-md-7 col-md-offset-1" style="margin-top: 10%; height: 210px;">
       <div class="fieldsWrapper">
-        <input id="nickname" type="text" class="form-control" placeholder="Nickname...">
-        <input id="email" type="email" class="form-control" placeholder="Email...">
-        <input id="password" type="password" class="form-control" placeholder="Password...">
-        <input id="confirm_password" type="password" class="form-control" placeholder="Confirm password...">
-        <button class="createButton">Create my account</button>
+          <form method="post" style="display: inline;">{% csrf_token %}
+            <input id="nickname" name="username" type="text" class="form-control" placeholder="Nickname...">
+            <input id="email" name="email" type="email" class="form-control" placeholder="Email...">
+            <input id="password" name="password1" type="password" class="form-control" placeholder="Password...">
+            <input id="confirm_password" name="password2" type="password" class="form-control" placeholder="Confirm password...">
+            <button type="submit" class="createButton">Create my account</button>
+          </form>
+          {% if error %}
+            <p class=”error” id="error">Invalid input data!</p>
+          {% endif %}
       </div>
     </div>
   </div>
