@@ -6,7 +6,7 @@ def check_authentication(request):
     context = dict()
     context['authenticated'] = request.user.is_authenticated
     if context['authenticated']:
-        context['username'] = request.user.username
+        context['user'] = request.user
     return context
 
 

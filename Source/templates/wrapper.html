@@ -34,9 +34,9 @@
         <ul class="navbar-nav mr-auto float-right">
             {% if authenticated %}
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ user.profile.get_absolute_url }}" class="nav-link">
                         <img src="/static/images/account.png" width="25" height="25" alt="account">
-                        {{username}}
+                        {{user.username}}
                     </a>
                 </li>
                 <li class="nav-item">
