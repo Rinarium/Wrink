@@ -138,5 +138,3 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jahorup@gmail.com'
 
 EMAIL_HOST_PASSWORD = 'uztpyizdicounptc'
-
-FROALA_EDITOR_THEME = 'dark'

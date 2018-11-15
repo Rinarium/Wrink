@@ -3,11 +3,16 @@ input.form-control, button.postButton {
     vertical-align: middle;
 }
 
-#photo {
-    width: 200px;
-    height: 200px;
-    margin: 10%;
-    border: 3px solid rgba(220, 53, 69, 0.6);
+.title {
+    color: rgba(180, 178, 179, 0.8);
+    font-size: 40px;
+    text-align: center;
+}
+
+.text {
+    color: rgba(180, 178, 179, 0.8);
+    font-size: 32px;
+    margin: 5%;
 }
 
 .row
@@ -20,15 +25,6 @@ input.form-control, button.postButton {
     border: 1px solid rgba(55, 55, 55, 0.4);
     border-radius: 5px;
     position: relative;
-}
-
-.column
-{
-    overflow: auto;
-    display: table-cell;
-    vertical-align: top;
-    color: rgba(180, 178, 179, 0.8);
-    font-size: 20px;
 }
 
 label.uploadButton,

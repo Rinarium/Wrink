@@ -10,6 +10,10 @@
     position: relative;
 }
 
+.label {
+    color: rgba(180, 178, 179, 0.8);
+    font-size: 25px;
+}
 
 button.postButton {
     height: 50%;
@@ -17,7 +21,7 @@ button.postButton {
     margin: 1% auto auto auto;
     border-radius: 3px;
     background-color: Transparent;
-    color: #161616;;
+    color: #161616;
     border: 1px solid #161616;
     transition-duration: 0.4s;
 }

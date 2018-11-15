@@ -1,7 +1,7 @@
 {% extends "wrapper.html" %}
 
 {% block title %}
-    Profile
+    {{ post.title }}
 {% endblock %}
 
 {% block style %}
@@ -10,11 +10,16 @@
 
 {% block content %}
     <div class="row">
-       <p>Title</p>
-        <div class="column" style="width: 20%;">
-            <div style="margin-top: 25%;">
-                <label class="label">Rating: {{ rating }}</label>
-                <div style="margin-right: 5%;">
+       <p class="title" style="margin: 1% 5% 5% 5%;">
+           {{ post.title }}
+       </p>
+        <div class="text">
+            {{ post.body|safe }}
+        </div>
+            <div style="margin-top: 5%;">
+                <label class="text" style="text-align: left; font-size: 20px;">Date of publication: {{ post.date|date:"M d, Y"}}</label>
+                <label class="text" style="position: absolute; right: 0px; font-size: 20px;">Rating: {{ rating }}</label>
+                <div>
                     <form action="" method="post">{% csrf_token %}
                         <button type="submit" class="postButton" name="plus">+</button>
                     </form>
@@ -23,7 +28,6 @@
                     </form>
                 </div>
             </div>
-        </div>
     </div>
 
     {% if messages %}
