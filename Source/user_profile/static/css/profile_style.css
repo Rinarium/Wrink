@@ -1,94 +1,99 @@
-input.form-control, button.sendButton {
+input.form-control, button.plusButton {
     margin: auto;
     vertical-align: middle;
 }
 
-#mainBlock {
-    margin-top: 5%;
+#photo {
+    width: 200px;
+    height: 200px;
+    margin: 10%;
+    border: 3px solid rgba(220, 53, 69, 0.6);
 }
 
-p.logo {
-    font-family: industry;
-    line-height: 0.95;
-    font-size: 6.5vw;
-    color: #cc182a;
-}
-
-.fieldsWrapper {
+.row
+{
+    width: 75%;
+    display: table;
+    table-layout: fixed;
+    margin: 1% auto auto auto;
+    background-color: rgba(22, 22, 22, 0.6);
+    border: 1px solid rgba(55, 55, 55, 0.4);
     border-radius: 5px;
-    text-align: center;
-    margin: auto;
-    width: 62%;
-    height: 50%;
+    position: relative;
 }
 
-button.sendButton,
-button.forgotButton {
-    height: 40%;
-    width: 100%;
+.column
+{
+    overflow: auto;
+    display: table-cell;
+    vertical-align: top;
+    color: rgba(180, 178, 179, 0.8);
+    font-size: 20px;
+}
+
+button.uploadButton,
+button.plusButton,
+button.minusButton {
+    height: 50%;
+    width: 50%;
     margin-top: 5%;
     border-radius: 3px;
     background-color: Transparent;
     color: #161616;;
     border: 1px solid #161616;
+    padding-right: 20px;
+    float: left;
 }
 
-button.sendButton,
-button.forgotButton{
+button.uploadButton {
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 200px;
+}
+
+button.uploadButton,
+button.plusButton,
+button.minusButton{
     transition-duration: 0.4s;
 }
 
-button.sendButton:hover {
+button.uploadButton:hover {
+    background-color: #faa45d;
+    border: 2px solid #faa45d;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+button.plusButton:hover {
     background-color: #3ab63a;
     border: 2px solid #3ab63a;
     color: #FFFFFF;
     cursor: pointer;
 }
 
-button.forgotButton:hover {
+button.minusButton:hover {
     background-color: #dc3545;
     border: 2px solid #dc3545;
     color: #FFFFFF;
     cursor: pointer;
 }
 
-button.sendButton:focus,
-button.forgotButton:focus {
+button.uploadButton:focus,
+button.plusButton:focus,
+button.minusButton:focus {
     border-color: rgba(255, 253, 254, 0.8);
     box-shadow: 0 1px 1px rgba(242, 213, 224, 0.7) inset, 0 0 8px rgba(246, 229, 205, 0.6);
     outline: 0 none;
 }
 
-#nickname, #password {
-    background-color: Transparent;
-    border-color: #161616;
-    color: #161616;
+button[name="save"] {
+    margin-bottom: 5%;
+    margin-top: 0;
     width: 100%;
-    height: 40%;
-    font-size: 20px;
-    margin-top: 5%;
 }
 
-#nickname:focus,
-#password:focus {
-    border-color: rgba(255, 253, 254, 0.8);
-    box-shadow: 0 1px 1px rgba(242, 213, 224, 0.7) inset, 0 0 8px rgba(246, 229, 205, 0.6);
-    outline: 0 none;
-}
-
-#nickname::placeholder,
-#password::placeholder {
-    color: #161616;
-}
-
-#error {
-    font-size: 1.35vw;
-    background-color: #161616;
-    border: 2px solid #161616;
-    color: #dc3545;
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15%;
+button[name="delete"] {
+    margin-left: 10%;
+    margin-top: 101%;
+    width: 80%;
 }

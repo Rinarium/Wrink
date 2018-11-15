@@ -11,6 +11,9 @@ def check_authentication(request):
 
 
 def home_page(request):
+    if request.method == "POST" and "delete" in request.POST:
+        request.user.delete()
+        logout(request)
     return render(request, 'home/home_page.html', check_authentication(request))
 
 

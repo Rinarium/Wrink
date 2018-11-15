@@ -10,6 +10,7 @@ class Profile(models.Model):
     location = models.CharField(max_length=50, blank=True)
     topics = models.CharField(max_length=50, blank=True)
     bio = models.CharField(max_length=300, blank=True)
+    rating = models.FloatField(default=1, blank=True)
 
     def get_absolute_url(self):
         return reverse_lazy('profile_page', kwargs={'profile_id': self.id})

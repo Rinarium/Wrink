@@ -30,9 +30,6 @@ button.createButton {
     background-color: Transparent;
     color: #161616;;
     border: 1px solid #161616;
-}
-
-button.createButton {
     transition-duration: 0.4s;
 }
 
@@ -73,16 +70,4 @@ button.createButton:focus {
 #password::placeholder,
 #confirm_password::placeholder {
     color: #161616;
-}
-
-#error {
-    font-size: 1.35vw;
-    background-color: #161616;
-    border: 2px solid #161616;
-    color: #dc3545;
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15%;
 }

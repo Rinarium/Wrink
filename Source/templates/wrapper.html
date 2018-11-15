@@ -10,7 +10,7 @@
   <script src="/static/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top">
     <a href="/" class="navbar-brand">
       <img src="/static/images/label.png" width="120" height="50" alt="logo">
     </a>
@@ -23,7 +23,7 @@
       <hr>
 
       <form class="form-inline my-2 my-lg-0">
-        <input type="text" class="form-control mr-lg-2 input-lg" style="width:475px; height: 30px;" placeholder="Search" aria-label="Search">
+        <input type="text" class="form-control mr-lg-2 input-lg" id="menuInput" placeholder="Search blogs..." aria-label="Search">
         <button class="btn btn-outline-danger my-2 my-sm-0" style="width:70px; height: 30px; padding: 0em;">Search</button>
       </form>
 
@@ -35,15 +35,15 @@
             {% if authenticated %}
                 <li class="nav-item">
                     <a href="{{ user.profile.get_absolute_url }}" class="nav-link">
-                        <img src="/static/images/account.png" width="25" height="25" alt="account">
+                        <img src="/static/images/account.png" width="27" height="27" alt="account">
                         {{user.username}}
                     </a>
                 </li>
                 <li class="nav-item">
-                     <a href="#" class="nav-link">Write</a>
+                     <a href="/new-post" class="nav-link">Write</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Settings</a>
+                    <a href="/settings" class="nav-link">Settings</a>
                 </li>
                 <li class="nav-item">
                     <a href="/sign-out" class="nav-link">Sign out</a>

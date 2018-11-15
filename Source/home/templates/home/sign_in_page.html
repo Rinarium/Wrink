@@ -17,10 +17,10 @@
           <form method="post" style="display: inline;">{% csrf_token %}
             <input id="nickname" type="text" name="username" class="form-control" placeholder="Nickname...">
             <input id="password" type="password" name="password" class="form-control" placeholder="Password...">
-            <button type="submit" class="sendButton">Sign In</button>
+            <button type="submit" class="plusButton">Sign In</button>
           </form>
           <form action="sign-in/password-reset" method="post" style="height: 100%;">{% csrf_token %}
-            <button type="submit" class="forgotButton">Forgot password</button>
+            <button type="submit" class="minusButton">Forgot password</button>
           </form>
           {% if error %}
             <p class=”error” id="error">Invalid nickname or password!</p>

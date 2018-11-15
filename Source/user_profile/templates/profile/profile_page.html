@@ -9,24 +9,44 @@
 {% endblock %}
 
 {% block content %}
-<div class="centered-form center-block">
-  <div class="container col-md-10 col-md-offset-1" id="mainBlock">
-    <p align="center" class="logo">{{ user.username }}</p>
-    <div class="container col-md-7 col-md-offset-1" style="margin-top: 10%; height: 210px;">
-      <div class="fieldsWrapper">
-          <form method="post" style="display: inline;">{% csrf_token %}
-            <input id="nickname" type="text" name="username" class="form-control" placeholder="Nickname...">
-            <input id="password" type="password" name="password" class="form-control" placeholder="Password...">
-            <button type="submit" class="sendButton">Sign In</button>
-          </form>
-          <form action="sign-in/password-reset" method="post" style="height: 100%;">{% csrf_token %}
-            <button type="submit" class="forgotButton">Forgot password</button>
-          </form>
-          {% if error %}
-            <p class=”error” id="error">Invalid nickname or password!</p>
-          {% endif %}
-      </div>
+    <div class="row">
+        <div class="column" style="width: 20%;">
+            <img src="/static/images/3.jpg" id="photo" alt="photo">
+        </div>
+        <div class="column">
+            <div style="margin-top: 5%;">
+                <label class="label">Name: {{ user.first_name }}</label>
+            </div>
+            <div>
+                <label class="label">From: {{ user.profile.location }}</label>
+            </div>
+            <div>
+                <label class="label">Topics: {{ user.profile.topics }}</label>
+            </div>
+            <div>
+                <label class="label">Bio: {{ user.profile.bio }}</label>
+            </div>
+        </div>
+        <div class="column" style="width: 20%;">
+            <div style="margin-top: 25%;">
+                <label class="label">Rating: {{ user.profile.rating }}</label>
+                <div style="margin-right: 5%;">
+                    <form action="" method="post">{% csrf_token %}
+                        <button type="submit" class="plusButton">+</button>
+                    </form>
+                    <form action="" method="post">{% csrf_token %}
+                        <button type="submit" class="minusButton">-</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}" id="error" style="margin-top: 1%; width: 85%;">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 {% endblock %}
