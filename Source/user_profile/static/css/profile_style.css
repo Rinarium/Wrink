@@ -31,7 +31,7 @@ input.form-control, button.plusButton {
     font-size: 20px;
 }
 
-button.uploadButton,
+label.uploadButton,
 button.plusButton,
 button.minusButton {
     height: 50%;
@@ -45,19 +45,19 @@ button.minusButton {
     float: left;
 }
 
-button.uploadButton {
+label.uploadButton {
     margin-left: 10%;
     margin-bottom: 5%;
     width: 200px;
 }
 
-button.uploadButton,
+label.uploadButton,
 button.plusButton,
 button.minusButton{
     transition-duration: 0.4s;
 }
 
-button.uploadButton:hover {
+label.uploadButton:hover {
     background-color: #faa45d;
     border: 2px solid #faa45d;
     color: #FFFFFF;
@@ -78,7 +78,7 @@ button.minusButton:hover {
     cursor: pointer;
 }
 
-button.uploadButton:focus,
+label.uploadButton:focus,
 button.plusButton:focus,
 button.minusButton:focus {
     border-color: rgba(255, 253, 254, 0.8);

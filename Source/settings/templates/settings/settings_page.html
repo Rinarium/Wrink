@@ -13,7 +13,10 @@
         <div class="column" style="width: 30%;">
             <img src="/static/images/account.png" id="photo" alt="photo" style="margin-bottom: 0;">
             <form action="" method="post">{% csrf_token %}
-                <button type="submit" class="uploadButton" name="upload">Upload photo</button>
+                <label class="uploadButton">
+                    <input type="file" name="document" style="display: none;">
+                    <p style="text-align: center; margin: 1%;">Upload photo</p>
+                </label>
             </form>
         </div>
         <div class="column">
