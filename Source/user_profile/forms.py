@@ -12,4 +12,4 @@ class UserForm(forms.ModelForm):
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ('location', 'topics', 'bio', 'rating')
+        fields = ('location', 'topics', 'bio')

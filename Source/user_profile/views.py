@@ -7,10 +7,18 @@ from .models import Profile
 from django.core.exceptions import ObjectDoesNotExist
 
 
+def count_rating(user):
+    try:
+        rating = user.profile.likes / user.profile.voters.count()
+    except ZeroDivisionError:
+        rating = 1
+    return rating
+
+
 def profile_page(request, profile_id):
     context = authenticated(request)
     if request.method == 'POST' and 'save' in request.POST:
-        user = request.user
+        user_profile = request.user
         user_form = UserForm(request.POST, instance=request.user)
         profile_form = ProfileForm(request.POST, instance=request.user.profile)
         if user_form.is_valid() and profile_form.is_valid():
@@ -22,8 +30,23 @@ def profile_page(request, profile_id):
     else:
         try:
             profile = Profile.objects.get(pk=profile_id)
-            user = profile.user
+            user_profile = profile.user
         except ObjectDoesNotExist:
             return render(request, 'home/home_page.html', context)
-    context['user_profile'] = user
+
+        if request.method == 'POST':
+            if request.user == user_profile:
+                messages.error(request, 'You cannot like yourself!')
+            elif user_profile.profile.voters.filter(user=request.user).exists():
+                messages.error(request, "You've already voted!")
+            elif 'plus' in request.POST:                                        # like
+                user_profile.profile.likes += 1
+                user_profile.profile.voters.add(request.user.profile)
+                user_profile.save()
+            else:
+                user_profile.profile.voters.add(request.user.profile)           # dislike
+                user_profile.save()
+
+    context['user_profile'] = user_profile
+    context['rating'] = count_rating(user_profile)
     return render(request, 'profile/profile_page.html', context)
