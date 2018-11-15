@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.contrib import messages
 from home.views import check_authentication as authenticated
 from .forms import UserForm, ProfileForm
-from django.contrib.auth.models import User
 from .models import Profile
 from django.core.exceptions import ObjectDoesNotExist
 

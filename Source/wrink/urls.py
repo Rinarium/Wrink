@@ -21,4 +21,7 @@ urlpatterns = [
     re_path(r'^', include('home.urls')),
     re_path(r'^profile/', include('user_profile.urls')),
     re_path(r'^settings/', include('settings.urls')),
+    re_path(r'^post/', include('post.urls')),
+    re_path(r'^write/', include('write.urls')),
+    re_path(r'^froala_editor/', include('froala_editor.urls')),
 ]

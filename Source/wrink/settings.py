@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'user_profile.apps.UserProfileConfig',
-    'settings.apps.SettingsConfig'
+    'settings.apps.SettingsConfig',
+    'post.apps.PostConfig',
+    'write.apps.WriteConfig',
+    'froala_editor',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +138,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jahorup@gmail.com'
 
 EMAIL_HOST_PASSWORD = 'uztpyizdicounptc'
+
+FROALA_EDITOR_THEME = 'dark'

@@ -1,0 +1,45 @@
+{% extends "wrapper.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/write_style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">{% csrf_token %}
+        <div class="row">
+            <div class="form-group">
+                <label class="label">Title:</label>
+                <input type="text" id="menuInput" style="width: 90%;" name="title">
+            </div>
+            <textarea name="body"></textarea>
+
+            <!-- Include external JS libs. -->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+
+            <!-- Include Editor JS files. -->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@2.9.1/js/froala_editor.pkgd.min.js"></script>
+
+            <!-- Initialize the editor. -->
+            <script> $(function() { $('textarea').froalaEditor() }); </script>
+            <button class="postButton">Post</button>
+        </div>
+    </form>
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}" id="error" style="margin-top: 1%; width: 85%;">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

@@ -1,4 +1,4 @@
-input.form-control, button.plusButton {
+input.form-control, button.postButton {
     margin: auto;
     vertical-align: middle;
 }
@@ -22,7 +22,7 @@ p.logo {
     height: 50%;
 }
 
-button.plusButton,
+button.postButton,
 button.minusButton {
     height: 40%;
     width: 100%;
@@ -34,7 +34,7 @@ button.minusButton {
     transition-duration: 0.4s;
 }
 
-button.plusButton:hover {
+button.postButton:hover {
     background-color: #3ab63a;
     border: 2px solid #3ab63a;
     color: #FFFFFF;
@@ -48,7 +48,7 @@ button.minusButton:hover {
     cursor: pointer;
 }
 
-button.plusButton:focus,
+button.postButton:focus,
 button.minusButton:focus {
     border-color: rgba(255, 253, 254, 0.8);
     box-shadow: 0 1px 1px rgba(242, 213, 224, 0.7) inset, 0 0 8px rgba(246, 229, 205, 0.6);

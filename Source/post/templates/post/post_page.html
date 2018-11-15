@@ -5,28 +5,12 @@
 {% endblock %}
 
 {% block style %}
-    <link rel="stylesheet" href="/static/css/profile_style.css">
+    <link rel="stylesheet" href="/static/css/post_style.css">
 {% endblock %}
 
 {% block content %}
     <div class="row">
-        <div class="column" style="width: 20%;">
-            <img src="/static/images/account.png" id="photo" alt="photo">
-        </div>
-        <div class="column">
-            <div style="margin-top: 5%;">
-                <label class="label">Name: {{ user_profile.first_name }}</label>
-            </div>
-            <div>
-                <label class="label">From: {{ user_profile.profile.location }}</label>
-            </div>
-            <div>
-                <label class="label">Topics: {{ user_profile.profile.topics }}</label>
-            </div>
-            <div>
-                <label class="label">Bio: {{ user_profile.profile.bio }}</label>
-            </div>
-        </div>
+       <p>Title</p>
         <div class="column" style="width: 20%;">
             <div style="margin-top: 25%;">
                 <label class="label">Rating: {{ rating }}</label>
