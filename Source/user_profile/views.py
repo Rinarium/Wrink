@@ -3,6 +3,7 @@ from django.contrib import messages
 from home.views import check_authentication as authenticated
 from .forms import UserForm, ProfileForm
 from .models import Profile
+from post.models import Post
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -30,6 +31,7 @@ def profile_page(request, profile_id):
         try:
             profile = Profile.objects.get(pk=profile_id)
             user_profile = profile.user
+            context['posts'] = Post.objects.filter(author=user_profile)
         except ObjectDoesNotExist:
             return render(request, 'home/home_page.html', context)
 

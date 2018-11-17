@@ -23,19 +23,19 @@
             <form action="{{ user.profile.get_absolute_url }}" method="post">{% csrf_token %}
                 <div class="form-group" style="margin-top: 7%;">
                     <label class="label">Name:</label>
-                    <input type="text" id="menuInput" style="float: right;" name="first_name" value="{{ user.first_name }}">
+                    <input type="text" id="settingsInput" name="first_name" value="{{ user.first_name }}">
                 </div>
                 <div class="form-group">
                     <label class="label">From:</label>
-                    <input type="text" id="menuInput" style="float: right;" name="location" value="{{ user.profile.location }}">
+                    <input type="text" id="settingsInput" name="location" value="{{ user.profile.location }}">
                 </div>
                 <div class="form-group">
                     <label class="label">Topics:</label>
-                    <input type="text" id="menuInput" style="float: right;" name="topics" value="{{ user.profile.topics }}">
+                    <input type="text" id="settingsInput" name="topics" value="{{ user.profile.topics }}">
                 </div>
                 <div class="form-group">
                     <label class="label">Bio:</label>
-                    <input type="text" id="menuInput" style="float: right;" name="bio" value="{{ user.profile.bio }}">
+                    <input type="text" id="settingsInput" name="bio" value="{{ user.profile.bio }}">
                 </div>
                 <button type="submit" class="postButton" name="save">Save changes</button>
             </form>

@@ -97,12 +97,50 @@ button[name="delete"] {
     width: 80%;
 }
 
-#menuInput {
+#settingsInput {
     width: 90%;
+    float: right;
+    background-color: rgba(10, 10,10, 0.4);
+    border: 1px solid rgba(55, 55, 55, 0.4);
+    color: rgba(222, 220, 221, 0.8);
+    border-radius: 5px;
 }
 
 .warning {
     text-align: center;
     margin: 7% 5% 5% 5%;
     font-size: 1.35vw;
+}
+
+.info {
+    right: 0;
+}
+
+#postLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5%;
+    font-size: 1.1vw;
+    color: rgba(180, 178, 179, 0.8);
+}
+
+#post {
+    color: rgba(180, 178, 179, 0.8);
+}
+
+#post:hover {
+    color: rgba(222, 220, 221, 0.8);
+}
+
+.infoElement {
+    align-self: auto;
+    margin: auto;
+}
+
+#breaker {
+    font-size: 2vw;
+    background-color: Transparent;
+    border: 0;
+    margin: 2% auto 0 auto;
 }

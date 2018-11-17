@@ -50,9 +50,22 @@
         </ul>
     {% endif %}
 
-    {% if post_list %}
-        {% for post in post_list %}
-                <li class="text" id="post" style="margin-top: 1%; width: 85%;">{{ post.title }}</li>
+    <div class="row" id="breaker">
+        <p>
+            Posts:
+        </p>
+    </div>
+
+    {% if posts %}
+        {% for post in posts %}
+            <div class="row" id="postLine">
+                <a href="{{ post.get_absolute_url }}" id="post">{{ post.title }}</a>
+                <span class="info">
+                    <span class="infoElement">Date: {{ post.date }}</span> |
+                    <span class="infoElement">Comments: {{ post.likes }}</span> |
+                    <span class="infoElement">Rating: {{ post.likes }}</span>
+                </span>
+            </div>
         {% endfor %}
     {% endif %}
 
