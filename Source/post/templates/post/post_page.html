@@ -9,25 +9,27 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-       <p class="title" style="margin: 1% 5% 5% 5%;">
+    <div class="block">
+       <p class="title">
            {{ post.title }}
        </p>
+    </div>
+    <div class="block">
         <div class="text">
             {{ post.body|safe }}
         </div>
-            <div style="margin-top: 5%;">
-                <label class="text" style="text-align: left; font-size: 20px;">Date of publication: {{ post.date|date:"M d, Y"}}</label>
-                <label class="text" style="position: absolute; right: 0px; font-size: 20px;">Rating: {{ rating }}</label>
-                <div>
-                    <form action="" method="post">{% csrf_token %}
-                        <button type="submit" class="postButton" name="plus">+</button>
-                    </form>
-                    <form action="" method="post">{% csrf_token %}
-                        <button type="submit" class="minusButton" name="minus">-</button>
-                    </form>
-                </div>
-            </div>
+    </div>
+    <div class="block">
+        <label class="text" style="text-align: left; font-size: 20px;">Date of publication: {{ post.date|date:"M d, Y"}}</label>
+        <label class="text" style="position: absolute; right: 0px; font-size: 20px;">Rating: {{ rating }}</label>
+        <div>
+            <form action="" method="post">{% csrf_token %}
+                <button type="submit" class="postButton" name="plus">+</button>
+            </form>
+            <form action="" method="post">{% csrf_token %}
+                <button type="submit" class="minusButton" name="minus">-</button>
+            </form>
+        </div>
     </div>
 
     {% if messages %}

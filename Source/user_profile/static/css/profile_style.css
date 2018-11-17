@@ -41,7 +41,6 @@ button.minusButton {
     background-color: Transparent;
     color: #161616;;
     border: 1px solid #161616;
-    padding-right: 20px;
     float: left;
 }
 
@@ -94,6 +93,16 @@ button[name="save"] {
 
 button[name="delete"] {
     margin-left: 10%;
-    margin-top: 101%;
+    margin-top: 10%;
     width: 80%;
+}
+
+#menuInput {
+    width: 90%;
+}
+
+.warning {
+    text-align: center;
+    margin: 7% 5% 5% 5%;
+    font-size: 1.35vw;
 }

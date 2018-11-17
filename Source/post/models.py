@@ -7,7 +7,7 @@ from froala_editor.fields import FroalaField
 
 class Post(models.Model):
     title = models.CharField(max_length=100, blank=True)
-    body = FroalaField()
+    body = FroalaField(theme='dark')
     date = models.DateField(blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     voters = models.ManyToManyField(Profile)

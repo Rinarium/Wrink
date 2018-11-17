@@ -12,27 +12,26 @@ input.form-control, button.postButton {
 .text {
     color: rgba(180, 178, 179, 0.8);
     font-size: 32px;
-    margin: 5%;
+    margin: 1% 4% 2% 4%;
 }
 
-.row
+.block
 {
     width: 75%;
     display: table;
     table-layout: fixed;
-    margin: 1% auto auto auto;
+    margin: 2% auto 2% auto;
     background-color: rgba(22, 22, 22, 0.6);
     border: 1px solid rgba(55, 55, 55, 0.4);
     border-radius: 5px;
     position: relative;
 }
 
-label.uploadButton,
 button.postButton,
 button.minusButton {
     height: 50%;
     width: 50%;
-    margin-top: 5%;
+    margin-top: 1%;
     border-radius: 3px;
     background-color: Transparent;
     color: #161616;;
@@ -41,23 +40,9 @@ button.minusButton {
     float: left;
 }
 
-label.uploadButton {
-    margin-left: 10%;
-    margin-bottom: 5%;
-    width: 200px;
-}
-
-label.uploadButton,
 button.postButton,
 button.minusButton{
     transition-duration: 0.4s;
-}
-
-label.uploadButton:hover {
-    background-color: #faa45d;
-    border: 2px solid #faa45d;
-    color: #FFFFFF;
-    cursor: pointer;
 }
 
 button.postButton:hover {
@@ -74,18 +59,11 @@ button.minusButton:hover {
     cursor: pointer;
 }
 
-label.uploadButton:focus,
 button.postButton:focus,
 button.minusButton:focus {
     border-color: rgba(255, 253, 254, 0.8);
     box-shadow: 0 1px 1px rgba(242, 213, 224, 0.7) inset, 0 0 8px rgba(246, 229, 205, 0.6);
     outline: 0 none;
-}
-
-button[name="save"] {
-    margin-bottom: 5%;
-    margin-top: 0;
-    width: 100%;
 }
 
 button[name="delete"] {
