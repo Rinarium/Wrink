@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout, views, forms, models
 
 
@@ -24,7 +24,7 @@ def sign_in_page(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return render(request, 'home/home_page.html', check_authentication(request))
+            return redirect('home_page')
         else:
             context = check_authentication(request)
             context['error'] = True
@@ -51,7 +51,7 @@ def sign_up_page(request):
 
 def sign_out(request):
     logout(request)
-    return render(request, 'home/home_page.html', check_authentication(request))
+    return redirect('home_page')
 
 
 class ResetPassword(views.PasswordResetView):
