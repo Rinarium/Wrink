@@ -35,11 +35,18 @@
         </p>
     </div>
 
-    {% if posts %}
-        {% for post in posts %}
+    {% if postsTitle or postsBody %}
+        {% for post in postsTitle %}
             <div class="row" id="postLine">
                 <a href="{{ post.get_absolute_url }}" id="post">{{ post.title }}</a>
             </div>
+        {% endfor %}
+        {% for post in postsBody %}
+            {% if post not in postsTitle %}
+            <div class="row" id="postLine">
+                <a href="{{ post.get_absolute_url }}" id="post">{{ post.title }}</a>
+            </div>
+            {% endif %}
         {% endfor %}
     {% else %}
         <div class="row" id="breaker">
