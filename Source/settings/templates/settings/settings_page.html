@@ -22,7 +22,7 @@
         <div class="column" style="width: 50%;">
             <form action="{{ user.profile.get_absolute_url }}" method="post">{% csrf_token %}
                 <div class="form-group" style="margin-top: 7%;">
-                    <label class="label">Name:</label>
+                    <label class="label" for="settingsInput">Name:</label>
                     <input type="text" id="settingsInput" name="first_name" value="{{ user.first_name }}">
                 </div>
                 <div class="form-group">

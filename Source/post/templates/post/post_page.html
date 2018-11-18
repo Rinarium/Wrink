@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block style %}
+    <link rel="stylesheet" href="/static/css/profile_style.css">
     <link rel="stylesheet" href="/static/css/post_style.css">
 {% endblock %}
 
@@ -21,6 +22,11 @@
     </div>
     <div class="block">
         <label class="text" style="text-align: left; font-size: 20px;">Date of publication: {{ post.date|date:"M d, Y"}}</label>
+        <label class="text" style="text-align: left; font-size: 20px;">Author:
+            <a href="{{ post.author.profile.get_absolute_url }}">
+                {{post.author.username}}
+            </a>
+        </label>
         <label class="text" style="position: absolute; right: 0px; font-size: 20px;">Rating: {{ rating }}</label>
         <div>
             <form action="" method="post">{% csrf_token %}
@@ -35,8 +41,55 @@
     {% if messages %}
         <ul class="messages">
             {% for message in messages %}
-                <li class="{{ message.tags }}" id="error" style="margin-top: 1%; width: 85%;">{{ message }}</li>
+                <li class="{{ message.tags }}" id="error" style="margin-top: 1%; width: 75%;">{{ message }}</li>
             {% endfor %}
         </ul>
     {% endif %}
+
+    <div class="block" id="breaker">
+        <p>
+            Comments:
+        </p>
+    </div>
+
+    {% if comments %}
+        {% for comment in comments %}
+            <div class="block" id="commentsLine">
+                <a href="{{ comment.author.profile.get_absolute_url }}" id="comment">{{ comment.author.username }}</a>
+                <span class="commentText">{{ comment.text }}</span>
+                <div class="info">
+                    <p class="infoElement">Date: {{ comment.date }}</p>
+                    <p class="infoElement">Likes: {{ comment.likes }}</p>
+                </div>
+                <div style="padding-left: 1%">
+                    <form action="" method="post">{% csrf_token %}
+                        <input type="hidden" name="commentID" value="{{ comment.id }}">
+                        <button type="submit" class="postButton" name="plusComment">+</button>
+                    </form>
+                    <form action="" method="post">{% csrf_token %}
+                        <input type="hidden" name="commentID" value="{{ comment.id }}">
+                        <button type="submit" class="minusButton" name="minusComment">-</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="block" id="breaker">
+            <p>
+                Be first and comment it!
+            </p>
+        </div>
+    {% endif %}
+
+    <div class="block" id="breaker">
+        <label for="comment">
+            Your comment:
+        </label>
+    </div>
+    <div class="block">
+        <form action="" method="post">{% csrf_token %}
+            <textarea class="area" name="comment" id="settingsInput" type="text" style="width: 100%"></textarea>
+            <button type="submit" class="commentButton" name="commentButton" style="width: 100%">Comment</button>
+        </form>
+    </div>
 {% endblock %}

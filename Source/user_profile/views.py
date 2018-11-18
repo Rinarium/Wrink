@@ -11,7 +11,7 @@ def count_rating(user):
     try:
         rating = user.profile.likes / user.profile.voters.count()
     except ZeroDivisionError:
-        rating = 1
+        rating = 1.0
     return rating
 
 

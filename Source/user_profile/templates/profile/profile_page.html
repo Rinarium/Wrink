@@ -63,10 +63,16 @@
                 <span class="info">
                     <span class="infoElement">Date: {{ post.date }}</span> |
                     <span class="infoElement">Comments: {{ post.likes }}</span> |
-                    <span class="infoElement">Rating: {{ post.likes }}</span>
+                    <span class="infoElement">Likes: {{ post.likes }}</span>
                 </span>
             </div>
         {% endfor %}
+    {% else %}
+        <div class="row" id="breaker">
+            <p>
+                There is no any post yet...
+            </p>
+        </div>
     {% endif %}
 
 {% endblock %}

@@ -27,6 +27,7 @@ input.form-control, button.postButton {
     position: relative;
 }
 
+button.commentButton,
 button.postButton,
 button.minusButton {
     height: 50%;
@@ -38,10 +39,6 @@ button.minusButton {
     border: 1px solid #161616;
     padding-right: 20px;
     float: left;
-}
-
-button.postButton,
-button.minusButton{
     transition-duration: 0.4s;
 }
 
@@ -59,6 +56,14 @@ button.minusButton:hover {
     cursor: pointer;
 }
 
+button.commentButton:hover {
+    background-color: #faa45d;
+    border: 2px solid #faa45d;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+button.commentButton:focus,
 button.postButton:focus,
 button.minusButton:focus {
     border-color: rgba(255, 253, 254, 0.8);
@@ -70,4 +75,21 @@ button[name="delete"] {
     margin-left: 10%;
     margin-top: 101%;
     width: 80%;
+}
+
+#commentsLine {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(180, 178, 179, 0.8);
+}
+
+#comment {
+    margin: auto;
+    padding: 1%;
+    color: rgba(229, 24, 46, 0.8);
+}
+
+.commentText {
+    width: 80%;
+    padding: 1%;
 }
