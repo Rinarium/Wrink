@@ -93,3 +93,18 @@ button[name="delete"] {
     width: 80%;
     padding: 1%;
 }
+
+.info {
+    width: 10%;
+}
+
+#deletePostButton {
+    width: 100%;
+}
+
+#deleteCommentButton {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+    font-size: 15px;
+}
