@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from home.views import check_authentication as authenticated
 from django.core.exceptions import ObjectDoesNotExist
@@ -28,8 +28,6 @@ def post_page(request, post_id):
                                              author=request.user, post=post)
             comment.save()
 
-<<<<<<< HEAD
-=======
     if 'deletePost' in request.POST:
         post.delete()
         return redirect(request.user.profile)
@@ -37,7 +35,6 @@ def post_page(request, post_id):
     if 'deleteComment' in request.POST:
         delete_comment(request)
 
->>>>>>> feat: add comment deletion
     if 'plusComment' in request.POST or 'minusComment' in request.POST:
         rate_comment(request)
 
