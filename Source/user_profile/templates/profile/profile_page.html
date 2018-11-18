@@ -62,7 +62,7 @@
                 <a href="{{ post.get_absolute_url }}" id="post">{{ post.title }}</a>
                 <span class="info">
                     <span class="infoElement">Date: {{ post.date }}</span> |
-                    <span class="infoElement">Comments: {{ post.likes }}</span> |
+                    <span class="infoElement">Comments: {{ post.comment_set.count }}</span> |
                     <span class="infoElement">Likes: {{ post.likes }}</span>
                 </span>
             </div>

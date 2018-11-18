@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from home.views import check_authentication as authenticated
 from .forms import UserForm, ProfileForm
@@ -33,10 +33,12 @@ def profile_page(request, profile_id):
             user_profile = profile.user
             context['posts'] = Post.objects.filter(author=user_profile)
         except ObjectDoesNotExist:
-            return render(request, 'home/home_page.html', context)
+            return redirect('home_page')
 
         if request.method == 'POST':
-            if request.user == user_profile:
+            if not request.user.is_authenticated:
+                messages.error(request, 'You must be signed in to like!')
+            elif request.user == user_profile:
                 messages.error(request, 'You cannot like yourself!')
             elif user_profile.profile.voters.filter(user=request.user).exists():
                 messages.error(request, "You've already voted!")

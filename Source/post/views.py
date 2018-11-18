@@ -32,7 +32,9 @@ def post_page(request, post_id):
         rate_comment(request)
 
     if 'plus' in request.POST or 'minus' in request.POST:
-        if request.user == post.author:
+        if not request.user.is_authenticated:
+            messages.error(request, 'You must be signed in to like!')
+        elif request.user == post.author:
             messages.error(request, 'You cannot like yourself!')
         elif post.voters.filter(user=request.user).exists():
             messages.error(request, "You've already voted!")
@@ -52,7 +54,9 @@ def post_page(request, post_id):
 def rate_comment(request):
     comment = Comment.objects.get(pk=request.POST.get('commentID'))
 
-    if request.user == comment.author:
+    if not request.user.is_authenticated:
+        messages.error(request, 'You must be signed in to like!')
+    elif request.user == comment.author:
         messages.error(request, 'You cannot like yourself!')
     elif comment.voters.filter(user=request.user).exists():
         messages.error(request, "You've already voted!")
