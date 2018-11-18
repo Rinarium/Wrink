@@ -20,7 +20,7 @@ def post_page(request, post_id):
         post = Post.objects.get(pk=post_id)
         context['post'] = post
     except ObjectDoesNotExist:
-        return render(request, 'home/home_page.html', context)
+        return redirect('home_page')
 
     if request.method == 'POST' and 'comment' in request.POST:
         if request.POST.get('comment'):
