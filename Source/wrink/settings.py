@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
     'home.apps.HomeConfig',
     'user_profile.apps.UserProfileConfig',
     'settings.apps.SettingsConfig',
     'post.apps.PostConfig',
     'write.apps.WriteConfig',
+    'search.apps.SearchConfig',
     'froala_editor',
 ]
 

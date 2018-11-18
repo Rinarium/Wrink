@@ -1,6 +1,5 @@
 
 p.logo {
-    /*margin-top: 100px;*/
     margin-top: 8%;
     font-family: industry;
     line-height: 0.95;
@@ -31,12 +30,12 @@ span.introBlack {
 }
 
 button.createButton {
-    height: 40%;
     width: 60px;
     border-radius: 3px;
     background-color: Transparent;
-    color: #161616;;
+    color: #161616;
     border: 1px solid #161616;
+    padding: 0.6%;
 }
 
 button.createButton {
@@ -74,7 +73,7 @@ input.form-control, button.createButton {
     border-color: #161616;
     color: #161616;
     width: 75%;
-    height: 40%;
+    height: 100%;
     font-size: 20px;
 }
 

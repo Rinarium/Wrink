@@ -1,0 +1,52 @@
+{% extends "wrapper.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/search_style.css">
+{% endblock %}
+
+{% block content %}
+    <div class="row" id="breaker">
+        <p>
+            Profiles:
+        </p>
+    </div>
+
+    {% if users %}
+        {% for user in users %}
+            <div class="row" id="postLine">
+                <a href="{{ user.profile.get_absolute_url }}" id="post">{{ user.username }}</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="row" id="breaker">
+            <p>
+                No results, try to search more correctly!
+            </p>
+        </div>
+    {% endif %}
+
+    <div class="row" id="breaker">
+        <p>
+            Posts:
+        </p>
+    </div>
+
+    {% if posts %}
+        {% for post in posts %}
+            <div class="row" id="postLine">
+                <a href="{{ post.get_absolute_url }}" id="post">{{ post.title }}</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="row" id="breaker">
+            <p>
+                No results, try to search more correctly!
+            </p>
+        </div>
+    {% endif %}
+
+{% endblock %}

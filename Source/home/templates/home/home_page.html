@@ -13,12 +13,12 @@
   <div class="container col-md-10 col-md-offset-1">
     <p align="center" class="logo">WRINK</p>
     <p align="center" class="introRed">wr<span class="introBlack">ite what you th</span>ink</p>
-    <div class="container col-md-7 col-md-offset-1" style="margin-top: 160px; height: 210px;">
-      <div class="searchWrapper">
-        <p class="inviteString"></p>
-        <input id="mainInput" type="text" class="form-control" placeholder="Enter a blog title or an author's name..." aria-label="Search">
-        <button class="createButton">Find</button>
-      </div>
+    <div class="container col-md-7 col-md-offset-1" style="margin-top: 160px;">
+          <form class="searchWrapper" action="/search" method="get">
+              <input id="mainInput" type="text" class="form-control" name="search" placeholder="Enter a blog title or an author's name..." aria-label="Search">
+              <button class="createButton">Find</button>
+          </form>
+      <div class="searchWrapper"></div>
     </div>
   </div>
 </div>
