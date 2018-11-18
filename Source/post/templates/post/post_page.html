@@ -71,6 +71,15 @@
                         <button type="submit" class="minusButton" name="minusComment">-</button>
                     </form>
                 </div>
+
+                {% if comment.author == user %}
+                    <div style="width: 3%;">
+                        <form action="" method="post">{% csrf_token %}
+                            <input type="hidden" name="commentID" value="{{ comment.id }}">
+                            <button type="submit" class="minusButton" name="deleteComment"><p id="deleteCommentButton">Del</p></button>
+                        </form>
+                    </div>
+                {% endif %}
             </div>
         {% endfor %}
     {% else %}
