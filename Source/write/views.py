@@ -14,5 +14,5 @@ def write_page(request):
         post.save()
         context = authenticated(request)
         context['post'] = post
-        return render(request, 'post/post_page.html', context)
+        return redirect('post_page', post.id)
     return render(request, 'write/write_page.html', authenticated(request))
