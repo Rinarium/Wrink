@@ -9,7 +9,10 @@ def write_page(request):
         return redirect('home_page')
 
     if request.method == 'POST':
-        post = Post.objects.create(title=request.POST.get('title'), body=request.POST.get('body'),
+        title = request.POST.get('title')
+        if not title:
+            title = 'Null'
+        post = Post.objects.create(title=title, body=request.POST.get('body'),
                                    date=datetime.date.today(), author=request.user)
         post.save()
         context = authenticated(request)
