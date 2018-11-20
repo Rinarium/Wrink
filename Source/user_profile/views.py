@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
 from home.views import check_authentication as authenticated
+from post.models import Post
 from .forms import UserForm, ProfileForm
 from .models import Profile
-from post.models import Post
-from django.core.exceptions import ObjectDoesNotExist
 
 
 def count_rating(user):

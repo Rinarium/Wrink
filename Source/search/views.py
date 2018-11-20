@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from home.views import check_authentication as authenticated
 from django.contrib.auth.models import User
+from home.views import check_authentication as authenticated
 from post.models import Post
 
 

@@ -1,8 +1,8 @@
 from django.db import models
-from user_profile.models import Profile
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from froala_editor.fields import FroalaField
+from user_profile.models import Profile
 
 
 class Post(models.Model):

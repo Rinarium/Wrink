@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from home.views import check_authentication as authenticated
 from django.core.exceptions import ObjectDoesNotExist
-from .models import Post, Comment
 import datetime
+from home.views import check_authentication as authenticated
+from .models import Post, Comment
 
 
 def count_rating(post):
