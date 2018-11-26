@@ -22,8 +22,8 @@
 ## 1 Glossary<a name="1"></a>
 <p align="justify"> List of basic definitions used in the design:</p>
 
-| Term | Definition |
-|: --- |: --- |
+| Term| Definition|
+|:---|:---|
 | Unregistered user | The person using the site without logging in |
 | Registered User | Signed in user |
 | Admin | A person logged in with privileged access |

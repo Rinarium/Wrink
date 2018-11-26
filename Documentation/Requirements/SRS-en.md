@@ -69,9 +69,9 @@ Main analogs of development project are:
 ##### 2.3.1 User classes <a name="2.3.1"></a>
 | Class | Description |
 |:---|:---|
-| Anonymous users | Users that are not signed up or signed in. They can use only search, watch user profiles and read articles. Rating and commenting is not available. |
-| Sign in users | Signed in users. They have access to whole functionality within their profile (including deletion). |
-| Administrators | Users that signed up in a special way and have access to all information. They are needed for filtering information that is not corresponding with business rules. |
+| Anonymous users | Users that are not signed up or signed in. They can use only search, watch user profiles and read articles. Rating and commenting is not available |
+| Authorized users | Signed in users. They have access to whole functionality within their profile (including deletion) |
+| Administrators | Users that signed up in a special way and have access to all information. They are needed for filtering information that is not corresponding with business rules |
 
 ##### 2.3.2 Application audience <a name="2.3.2"></a>
 <p align="justify">The audience is people of any age and level of education. It is divided into readers and writers. If the reader can be anyone, then active and creative individuals will become writers.</p>
@@ -88,39 +88,39 @@ Main analogs of development project are:
 |:---|:---|
 | Sign in to the application without creating your own profile | The application must allow the user to log in to the application anonymously |
 | Register a new user | The application must ask the user to enter a name and password to create an account. The user must either enter or cancel the action |
-| * A user with the same name exists * | * The application must notify the user about the registration error and request input * |
+| *A user with the same name exists* | *The application must notify the user about the registration error and request input |
 | Registered user login to the application | The application must ask the user to enter a name and password for authorization. If the data is entered correctly, the user gets access to the functionality, otherwise the application must request re-entry |
 
 ##### 3.1.2 User profile settings <a name="3.1.2"></a>
-** Description. ** Registered user has the ability to edit their personal information.
+**Description.** Registered user has the ability to edit their personal information.
 
 | Function | Requirements |
-|: --- |: --- |
+|:---|:---|
 | Change personal information | The application must provide the user with the opportunity to change the name, address, list of topics, biography and photo |
 | Delete articles | The application must allow the user to delete his articles |
 | Delete comments | The application must allow the user to delete his comments |
 | Delete profile | The application must provide the user with the ability to completely remove the blog |
 
 ##### 3.1.3 User interaction <a name="3.1.3"></a>
-** Description. ** After signing in, users can interact with each other.
+**Description.** After signing in, users can interact with each other.
 
 | Function | Requirements |
-|: --- |: --- |
+|:---|:---|
 | Leave comment | The application must allow authorized users to leave comments under any blog entries |
 | Rate comment | The application must provide an authorized user the ability to rate comments from other users |
 | Rate profile | The application must provide an authorized user the ability to rate the pages of other users |
-| * Rate your comments and your profile * | * The application must notify the user that you can not evaluate yourself * |
-| * Rate again * | * The application must notify the user that he has already rated this comment or blog * |
+| *Rate your comments and your profile* | *The application must notify the user that you can not evaluate yourself* |
+| *Rate again* | *The application must notify the user that he has already rated this comment or blog* |
 
 ##### 3.1.4 Search request <a name="3.1.4"></a>
-** Description. ** Any user has the opportunity to send a search query.
+**Description.** Any user has the opportunity to send a search query.
 
-** Requirement. ** The application must provide matches for the names of articles and profiles with the search request.
+**Requirement.** The application must provide matches for the names of articles and profiles with the search request.
 
 ##### 3.1.5 Writing an article <a name="3.1.5"></a>
-** Description. ** Signed in users can write and publish articles.
+**Description.** Signed in users can write and publish articles.
 
-** Requirement. ** The application must allow you to write an article using a text editor and publish it.
+**Requirement.** The application must allow you to write an article using a text editor and publish it.
 
 #### 3.2 Non-functional requirements <a name="3.2"></a>
 ##### 3.2.1 Quality attributes <a name="3.2.1"></a>
