@@ -135,4 +135,4 @@ The site must:
 - support the use of the keyboard not only for entering text, but also for selecting operations.
 
 ##### 3.2.4 Constraints <a name="3.2.4"></a>
-<p align="justify">All information (user profiles, articles, comments) is stored in a database.</p>
+<p align="justify">All information (user profiles, articles, comments) is stored in a database  on a single server..</p>
