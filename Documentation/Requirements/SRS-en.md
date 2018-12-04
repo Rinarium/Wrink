@@ -124,7 +124,7 @@ Main analogs of development project are:
 
 #### 3.2 Non-functional requirements <a name="3.2"></a>
 ##### 3.2.1 Quality attributes <a name="3.2.1"></a>
-<p align = "justify"> The project must be small (have less than 10 types of pages), convenient (access to the main functions of the application for no more than two operations) and manageable (the user can cancel all his actions).</p>
+<p align = "justify"> The project must be small (have less than 10 types of pages), convenient (access to the main functions of the application for no more than three operations) and manageable (the user can cancel all his actions).</p>
 
 ##### 3.2.2 Business rules <a name="3.2.2"></a>
 <p align="justify">The project must be able to remove from the site information that violates the laws of countries.</p>
